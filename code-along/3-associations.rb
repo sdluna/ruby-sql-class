@@ -21,8 +21,8 @@ new_contact.save
 
 
 # 2. How many contacts work at Apple?
-apple_contacts = Contact.where{"company_id" => apple["id"]}
-puts "Apple contacts: #{apple_contacts}"
+apple_contacts = Contact.where({"company_id" => apple["id"]})
+puts "Apple contacts: #{apple_contacts.all.count}"
 
 # 3. What is the full name of each contact who works at Apple?
 for contact in apple_contacts
